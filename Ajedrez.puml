@@ -1,0 +1,37 @@
+@startuml
+hide circle
+
+class Pieza
+class Casilla
+class Color
+class Partido
+class Jugador{
+color: Color
+}
+class Caballo
+class Peon
+class Alfil
+class Torre
+class Rey
+class Reina
+class Tablero
+
+Tablero <-- Casilla
+
+Jugador --> Pieza
+
+
+Pieza <- Color
+Partido -> Jugador
+
+Tablero <- Partido
+
+Pieza <|-- Caballo
+Pieza <|-- Torre
+Pieza <|-- Peon
+Pieza <|-- Alfil
+Pieza <|-- Reina
+Pieza <|-- Rey
+
+
+@enduml
