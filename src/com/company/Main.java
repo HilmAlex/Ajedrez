@@ -7,7 +7,8 @@ public class Main {
         Jugador pablo = new Jugador("pablo");
         Partido partido = new Partido(pepe, pablo);
         partido.iniciar();
-        pepe.mover(a2, a3);
+        System.out.println("hola haciendo prueba");
+        System.out.println("hola haciendo prueb2222a");
 
     }
 }
