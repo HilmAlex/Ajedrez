@@ -1,4 +1,4 @@
 package com.company;
 
-public class Reina {
+public class Reina extends Pieza {
 }
