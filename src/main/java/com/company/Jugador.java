@@ -10,9 +10,7 @@ public class Jugador {
     }
 
 
-    public void mover(Pieza pieza, Casilla posicionInicial, Casilla posicionFinal){
 
-    }
 
 
 }

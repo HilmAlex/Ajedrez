@@ -33,11 +33,6 @@ public class Partido {
     }
 
     private void cargarPiezas(){
-        for (int i = 0; i < 8; i++) {
-
-
-        piezasBlancas.add(new Peon(new Blanco(), new Posicion(2, String.valueOf((char)(i+65)))));
-        piezasNegras.add(new Peon(new Negras(), new Posicion(7,"")));
 
         }
     }
@@ -46,10 +41,7 @@ public class Partido {
 
 
 
-    public void iniciar() {
-        jugadorNegras
-
-    }
 
 
-}
+
+

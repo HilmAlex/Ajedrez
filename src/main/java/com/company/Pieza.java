@@ -3,10 +3,13 @@ package com.company;
 public class Pieza {
 
     private Color color;
-    private Posicion posicion;
+    public Pieza(Color color) {
 
-    public Pieza(Color color, Posicion posicion) {
         this.color = color;
-        this.posicion = posicion;
+    }
+
+    @Override
+    public String toString() {
+        return " " + getClass().getName().substring(12) + " " +color;
     }
 }

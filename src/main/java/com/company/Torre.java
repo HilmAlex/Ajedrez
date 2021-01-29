@@ -1,7 +1,7 @@
 package com.company;
 
 public class Torre extends Pieza {
-    public Torre(Color color, Posicion posicion) {
-
+    public Torre(Color color) {
+        super(color);
     }
 }

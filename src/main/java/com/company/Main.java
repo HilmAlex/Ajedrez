@@ -8,10 +8,12 @@ public class Main {
 
         Partido partido = new Partido(pepe, pablo);
 
-        partido.iniciar();
+       // partido.iniciar();
 
+        Tablero tablero = new Tablero();
+        tablero.imprimirCasilla();
 
+        pepe.mover(1,0,2,0);
 
-        pepe.mover(a2, a3);
     }
 }
