@@ -1,12 +1,29 @@
 @startuml
 hide circle
 
-class Pieza
-class Casilla
-class Color
-class Partido
-class Jugador{
+class MoficarMovimiento{
+}
+class Pieza{
 color: Color
+}
+class Casilla{
+pieza: Pieza
+}
+class Color{
+NEGRO, BLANCO
+}
+class Partido{
+tablero: Tablero
+jugadorBlancas: Jugador
+jugadorNegras: Jugador
+iniciar()
+definirColor()
+}
+class Jugador{
+mover()
+enPartida: boolean
+turno: boolean
+nombreJugador: String
 }
 class Caballo
 class Peon
@@ -14,7 +31,12 @@ class Alfil
 class Torre
 class Rey
 class Reina
-class Tablero
+class Tablero{
+casillas: Casilla[][]
+llenarTablero()
+instanciarCasillas()
+imprimirTablero()
+}
 
 Tablero --> Casilla
 
@@ -30,8 +52,25 @@ Pieza <|-- Caballo
 Pieza <|-- Torre
 Pieza <|-- Peon
 Pieza <|-- Alfil
-Pieza <|-- Reina
-Pieza <|-- Rey
+Pieza <|--- Reina
+Pieza <|--- Rey
 
+Caballo ..|> IKnigthMove
+Peon ..|> IStraigthUpMovement
+Peon ..|> IStraigthDownMovement
+Peon ..|> IDiagonalMovement
+Alfil ..|> IDiagonalMovement
+
+Torre ..|> IStraigthDownMovement
+Torre ..|> IStraigthUpMovement
+Torre ..|> IStraigthSideMovement
+
+Rey ...|> AllMoves
+Reina ...|> AllMoves
+
+AllMoves --> IDiagonalMovement
+AllMoves --> IStraigthSideMovement
+AllMoves --> IStraigthUpMovement
+AllMoves --> IStraigthDownMovement
 
 @enduml

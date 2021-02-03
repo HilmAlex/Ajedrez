@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Tablero {
 
 
-    private Casilla[][] casillas = new Casilla[8][8];
+    public Casilla[][] casillas = new Casilla[8][8];
 
     public Tablero() {
         instanciarCasilla();
@@ -13,10 +13,12 @@ public class Tablero {
     }
 
     public void llenarTablero() {
+
         for (int j = 0; j < 8; j++) {
             casillas[1][j].setPieza( new Peon(Color.BLANCO) );
             casillas[6][j].setPieza( new Peon(Color.NEGRO) );
         }
+
         casillas[0][0].setPieza(new Torre(Color.BLANCO));
         casillas[7][7].setPieza(new Torre(Color.NEGRO));
         casillas[0][7].setPieza(new Torre(Color.BLANCO));
@@ -38,6 +40,9 @@ public class Tablero {
         casillas[7][4].setPieza(new Rey(Color.NEGRO));
 
     }
+
+
+
     public void instanciarCasilla(){
         for (int i = 0; i < casillas.length; i++) {
             for (int j = 0; j < casillas.length; j++) {
@@ -45,19 +50,34 @@ public class Tablero {
             }
         }
     }
-    public void imprimirCasilla(){
-        for (int i = 7; i >= 0; i--) {
-            for (int j = 7; j >= 0; j--) {
-                System.out.print(casillas[i][j].getPieza() + " ");
-            }
-            System.out.println();
+
+
+    public void imprimirTablero(){
+        String ra = "  |";
+        String letra = "        ";
+        for(int i=0;i<=7;i++){
+            letra += Character.toString((char)( i + 65));
+            letra += "           ";
         }
+        for (int i= 1; i<=88 ; i++){
+            ra += "-";
+            if(i%11==0){
+                ra += "|";
+            }
+        }
+        System.out.println(letra);
+        for (int i = 7; i >= 0; i--) {
+            System.out.print(ra + "\n" + (i+1) + " |");
+            for (int j = 0; j <= 7; j++) {
+                System.out.printf("%-11s|", casillas[i][j].getPieza());
+            }
+            System.out.println(" " + (i+1));
+        }
+        System.out.println(ra + "\n" +letra);
     }
 
-    public void mover(int filaInicial, int columnaInicial, int filaFinal, int columnaFinal ){
 
+    public Casilla getCasillas(int columna, int fila) {
+        return casillas[fila][columna];
     }
-
-
-
 }

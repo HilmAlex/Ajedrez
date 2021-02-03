@@ -1,27 +1,17 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 public class Partido {
     private Jugador jugadorNegras;
     private Jugador jugadorBlancas;
+    private Tablero tablero;
 
 
-
-
-    private ArrayList<Pieza> piezasBlancas = new ArrayList<Pieza>();
-    private ArrayList<Pieza> piezasNegras = new ArrayList<Pieza>();
 
     public Partido(Jugador jugador1, Jugador jugador2) {
-        definirColor(jugador1, jugador2);
-
+        iniciar(jugador1, jugador2);
     }
 
-
-
-
-    public void definirColor(Jugador jugador1, Jugador jugador2) {
+    private void definirColorJugador(Jugador jugador1, Jugador jugador2) {
         int numero = (int) (Math.random() * 2);
         if (numero == 0) {
             this.jugadorBlancas = jugador1;
@@ -32,10 +22,21 @@ public class Partido {
         }
     }
 
-    private void cargarPiezas(){
+    public void iniciar(Jugador jugador1, Jugador jugador2){
+        definirColorJugador(jugador1, jugador2);
+        this.tablero = new Tablero();
+        jugadorBlancas.setTurno(true);
 
-        }
     }
+
+    public Jugador getJugadorNegras() {
+        return jugadorNegras;
+    }
+
+    public Jugador getJugadorBlancas() {
+        return jugadorBlancas;
+    }
+}
 
 
 
