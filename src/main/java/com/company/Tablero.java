@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.HashMap;
-
 public class Tablero {
 
 
@@ -80,4 +78,6 @@ public class Tablero {
     public Casilla getCasillas(int columna, int fila) {
         return casillas[fila][columna];
     }
+
+
 }

@@ -8,6 +8,11 @@ public class Pieza {
         this.color = color;
     }
 
+
+    public Color getColor() {
+        return color;
+    }
+
     @Override
     public String toString() {
         return " " + getClass().getName().substring(12) + " " +color.toString().charAt(0);

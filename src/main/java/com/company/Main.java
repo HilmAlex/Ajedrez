@@ -6,22 +6,22 @@ public class Main {
         Jugador pepe = new Jugador("Pepe");
         Jugador pablo = new Jugador("Pablo");
 
-        Partido partido = new Partido(pepe, pablo);
-
         Tablero tablero = new Tablero();
+        Partido partido = new Partido(pepe, pablo, tablero);
 
-        // partido.iniciar();
 
-
-        pepe.tableroJugador.imprimirTablero();
 
         System.out.println();
-        pepe.mover("a", 2, "AAaa", 3);
-        pablo.mover("gGgG", 7, "g", 3);
-
+        try {
+            partido.registrarMovimiento(pepe, "a", 2, "AAaa", 3);
+            partido.registrarMovimiento(pepe, "f", 6, "AAaa", 3);
+            partido.registrarMovimiento(pablo, "gGgG", 6, "g", 3);
+        }catch (RegistrarMovimientoExcepcion e) {
+            System.out.println("Ocurrió un error debido a " + e.getMessage());
+        }
         System.out.println();
-        pepe.tableroJugador.imprimirTablero();
-        pablo.tableroJugador.imprimirTablero();
+
+
 
 
     }
