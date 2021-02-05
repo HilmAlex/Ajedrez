@@ -11,7 +11,7 @@ public class Main {
 
 
 
-        System.out.println();
+        System.out.println(pepe.getColor());
         try {
             partido.registrarMovimiento(pepe, "z", 2, "zAaa", 3);
            // partido.registrarMovimiento(pablo, "aGgG", 6, "g", 3);

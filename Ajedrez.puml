@@ -1,7 +1,7 @@
 @startuml
 hide circle
 
-class MoficarMovimiento{
+class RegistrarMovimientoExcepcion{
 }
 class Pieza{
 color: Color
@@ -18,9 +18,9 @@ jugadorBlancas: Jugador
 jugadorNegras: Jugador
 iniciar()
 definirColor()
+registrarMovimiento()
 }
 class Jugador{
-mover()
 enPartida: boolean
 turno: boolean
 nombreJugador: String
