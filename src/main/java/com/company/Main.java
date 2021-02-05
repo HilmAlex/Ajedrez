@@ -13,9 +13,9 @@ public class Main {
 
         System.out.println();
         try {
-            partido.registrarMovimiento(pepe, "a", 2, "AAaa", 3);
-            partido.registrarMovimiento(pepe, "f", 6, "AAaa", 3);
-            partido.registrarMovimiento(pablo, "gGgG", 6, "g", 3);
+            partido.registrarMovimiento(pepe, "z", 2, "zAaa", 3);
+           // partido.registrarMovimiento(pablo, "aGgG", 6, "g", 3);
+            //partido.registrarMovimiento(pepe, "a", 6, "AAaa", 3);
         }catch (RegistrarMovimientoExcepcion e) {
             System.out.println("Ocurrió un error debido a " + e.getMessage());
         }

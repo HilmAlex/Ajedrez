@@ -75,7 +75,7 @@ public class Tablero {
     }
 
 
-    public Casilla getCasillas(int columna, int fila) {
+    public Casilla getCasillas(int columna, int fila) throws IndexOutOfBoundsException{
         return casillas[fila][columna];
     }
 
