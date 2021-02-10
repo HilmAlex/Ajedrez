@@ -9,7 +9,7 @@ public class Main {
         Tablero tablero = new Tablero();
         Partido partido = new Partido(pepe, pablo, tablero);
 
-
+        //hola
         tablero.imprimirTablero();
 
         System.out.println(pepe.getColor());
