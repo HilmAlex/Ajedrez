@@ -10,18 +10,18 @@ public class Main {
         Partido partido = new Partido(pepe, pablo, tablero);
 
 
+        tablero.imprimirTablero();
 
         System.out.println(pepe.getColor());
+
         try {
-            partido.registrarMovimiento(pepe, "z", 2, "zAaa", 3);
-           // partido.registrarMovimiento(pablo, "aGgG", 6, "g", 3);
+            partido.registrarMovimiento(pepe, "a", 1, "a", 4);
+            tablero.imprimirTablero();
+            // partido.registrarMovimiento(pablo, "aGgG", 6, "g", 3);
             //partido.registrarMovimiento(pepe, "a", 6, "AAaa", 3);
-        }catch (RegistrarMovimientoExcepcion e) {
+        } catch (RegistrarMovimientoExcepcion e) {
             System.out.println("Ocurrió un error debido a " + e.getMessage());
         }
-        System.out.println();
-
-
 
 
     }

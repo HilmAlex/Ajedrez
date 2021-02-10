@@ -5,6 +5,13 @@ public class Caballo extends Pieza{
         super(color);
         this.setDistanciaMaxima(3);
     }
+
+    @Override
+    public boolean comprobarMovimiento(Tablero tablero, int intColumnaInicio, int filaInicio, int intColumnaFinal,
+                                       int filaFinal) {
+        return false;
+    }
+
     public boolean comprobarMovimiento() {
         return true;
     }
