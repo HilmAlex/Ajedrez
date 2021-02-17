@@ -5,7 +5,6 @@ package com.company;
 public class Jugador {
 
     private final String nombreJugador;
-//    private boolean turno;
     private boolean enPartida;
     private Color color;
 
@@ -13,12 +12,6 @@ public class Jugador {
         this.nombreJugador = nombreJugador;
     }
 
-
-
-
-//    public void setTurno(boolean turno) {
-//        this.turno = turno;
-//    }
 
     public void setEnPartida(boolean enPartida) {
         this.enPartida = enPartida;
@@ -32,10 +25,6 @@ public class Jugador {
         return nombreJugador;
     }
 
-//    public boolean isTurno() {
-//        return turno;
-//    }
-
     public boolean isEnPartida() {
         return enPartida;
     }
@@ -44,7 +33,7 @@ public class Jugador {
         return color;
     }
 
-    //TODO:  Verificar los movimientos posibles de cada pieza
+
 
 }
 

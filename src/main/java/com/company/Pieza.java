@@ -28,6 +28,10 @@ public abstract class Pieza {
 
     public abstract boolean comprobarMovimiento(Tablero tablero, int intColumnaInicio, int filaInicio, int intColumnaFinal, int filaFinal);
 
+    public int getDistanciaMaxima() {
+        return distanciaMaxima;
+    }
+
     @Override
     public String toString() {
         return " " + getClass().getName().substring(12) + " " + color.toString().charAt(0);

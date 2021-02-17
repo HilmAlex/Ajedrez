@@ -48,7 +48,7 @@ public class Partido {
 
         //TODO: Verificar que exista una fecha en la casilla a mover
         if (tablero.getCasillas(intColumnaInicio, filaInicio).getPieza() == null) {
-            throw new RegistrarMovimientoExcepcion("Se intentó mover una pieza que no se encuentra en dicha casilla");
+            throw new RegistrarMovimientoExcepcion("No existe ninguna pieza en dicha casilla");
         }
 
 
@@ -66,9 +66,19 @@ public class Partido {
         }
 
 
+        //TODO: Verificar que no pueda mover a la misma casilla
+        if (intColumnaFinal ==intColumnaInicio && filaInicio == filaFinal){
+            throw new RegistrarMovimientoExcepcion("Se quiere mover una ficha a la misma posición");
+        }
+
+        //TODO: Verificar que en la casilla de llegada no haya una ficha del mismo color
+        if(tablero.getCasillas(intColumnaInicio, filaInicio).getPieza().getColor() == tablero.getCasillas(intColumnaFinal, filaFinal).getPieza().getColor()){
+            throw new RegistrarMovimientoExcepcion("En la casilla de llegada tiene una ficha de tu mismo color");
+        }
+
         //TODO: Verificar que una pieza puede moverse acorde a sus características
         if (!tablero.getCasillas(intColumnaInicio, filaInicio).getPieza().comprobarMovimiento(tablero,intColumnaInicio, filaInicio, intColumnaFinal, filaFinal)) {
-            throw new RegistrarMovimientoExcepcion(tablero.getCasillas(intColumnaInicio, filaInicio).getPieza() + " no se puede mover. Reconsidere su jugada");
+            throw new RegistrarMovimientoExcepcion("El movimiento de" + tablero.getCasillas(intColumnaInicio, filaInicio).getPieza() + " no es legal. Reconsidere su jugada");
         }
 
 
