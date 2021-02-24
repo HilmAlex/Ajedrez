@@ -12,6 +12,4 @@ public class Casilla {
         this.pieza = pieza;
     }
 
-
-
 }

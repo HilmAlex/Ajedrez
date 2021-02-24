@@ -22,7 +22,8 @@ public class Main {
 
             tablero.imprimirTablero();
             // partido.registrarMovimiento(pablo, "aGgG", 6, "g", 3);
-            //partido.registrarMovimiento(pepe, "a", 6, "AAaa", 3);
+            // partido.registrarMovimiento(pepe, "a", 6, "AAaa", 3);
+
         } catch (RegistrarMovimientoExcepcion e) {
             System.out.println("Ocurrió un error debido a " + e.getMessage());
         }
